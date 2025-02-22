@@ -73,7 +73,7 @@ public class FirstSteps {
     }
 
     public double average(int[] array) {
-        int middle = 0;
+        float middle = 0f;
         if (array.length > 0) {
             middle = sum(array)/array.length;
         }
@@ -168,4 +168,5 @@ public class FirstSteps {
         }
         return true;
     }
+
 }
