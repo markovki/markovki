@@ -73,22 +73,25 @@ public class FirstSteps {
     }
 
     public double average(int[] array) {
-        double middle = 0;
-        if (array.length > 0) {
-            middle = sum(array)/array.length;
+        if (array != null && array.length > 0) {
+            return (double) sum(array) / array.length;
         }
-        return middle;
+        return 0;
     }
 
     public boolean isSortedDescendant(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            if (i + 1 < array.length) {
-                if (array[i + 1] > array[i]) {
+        if (array == null) {
+            return false;
+        } else if (array.length < 2) {
+            return true;
+        } else {
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i + 1] >= array[i]) {
                     return false;
                 }
             }
+            return true;
         }
-        return true;
     }
 
     public void cube(int[] array) {
